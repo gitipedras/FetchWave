@@ -12,8 +12,8 @@ app.secret_key = b'_5#y2L"F4Q8z\n\xec]/'  # Secret key for session management
 mail = Mail(app)
 
 # Predefined username and password
-valid_username = 'ian'
-valid_password = 'ian'
+valid_username = '123'
+valid_password = 'bad password'
 
 app.static_folder = 'templates'
 
