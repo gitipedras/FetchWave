@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Downloader</title>
+    <style>
+      body {
+    font-family: monospace;
+}
+
+.navabar {
+    float: left;
+    height: 240px;
+    width: 100px;
+    border: 1px solid black;
+    padding: 10px;
+}
+
+.navabar a {
+    color: red;
+    font-size: 15px;
+    text-decoration: none;
+}
+
+
+.navabar a:hover {
+    color: orange;
+}
+
+.navabar  .active {
+    color: orange;
+    text-decoration: none;
+}
+
+.main {
+    margin-left: 150px;
+}
+
+table, tr, td {
+    border: 1px solid black;
+}
+    </style>
+</head>
+<body>
+<div class="navabar">
+    <p>FetchWave</p>
+    <p> POWERED BY FLASK </p>
+    <a href="#" class="active">Share</a><br>
+    <br>
+</div>
+<div class="main">
+    <h2>Share a file</h2>
+    <form action="/upload" method="post" enctype="multipart/form-data">
+        <p>To:</p>
+        <input type="email" name="email" required>
+        <p>File:</p>
+        <label for="repository">Select a repository:</label>
+        <select name="repository" id="repository">
+            <option value="0">Select a repository:</option>
+            <option value="calman-hp">calman-builds-hp</option>
+            <option value="calman-del">calman-builds-del</option>
+        </select>
+        <br>
+        <label for="file">Select a file:</label>
+        <br>
+        <input type="file" id="file" name="file" required>
+        <br>
+        <p>Expires in:</p>
+        <select name="expiration" id="expiration">
+            <option value="0">Select an expiration date:</option>
+            <option value="1-week">1 week</option>
+            <option value="30-days">30 days</option>
+            <option value="1-year">1 year</option>
+        </select>
+        <p>Number of allowed downloads by the client:</p>
+        <select name="downloads" id="downloads">
+            <option value="0">Select a number of allowed downloads:</option>
+            <option value="2-d">2 downloads (recommended)</option>
+            <option value="3-d">3 downloads</option>
+            <option value="7-d">7 downloads</option>
+            <option value="unlimited-d">Unlimited downloads (potential security risk + not recommended)</option>
+        </select>
+        <br>
+        <input type="submit" value="Share File">
+    </form>
+</div>
+</body>
+</html>
+

@@ -1,0 +1,35 @@
+body {
+    font-family: monospace;
+}
+
+.navabar {
+    float: left;
+    height: 240px;
+    width: 100px;
+    border: 1px solid black;
+    padding: 10px;
+}
+
+.navabar a {
+    color: red;
+    font-size: 15px;
+    text-decoration: none;
+}
+
+
+.navabar a:hover {
+    color: orange;
+}
+
+.navabar  .active {
+    color: orange;
+    text-decoration: none;
+}
+
+.main {
+    margin-left: 150px;
+}
+
+table, tr, td {
+    border: 1px solid black;
+}
